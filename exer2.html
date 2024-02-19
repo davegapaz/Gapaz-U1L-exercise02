@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gapaz Portfolio</title>
+    </head>
+        <style type="text/css">
+            *{
+                margin: 0;
+                padding: 0;
+                font-family: 'Poppins', sans-serif;
+                box-sizing: border-box;
+            }
+            body{
+                background: black;
+                color: white;   
+            }
+            #header{
+                width: 100%;
+                height: 150vh;
+                background-image: url(MyPic.jpg);
+                background-size: cover;
+                background-position: right center;
+            }
+            
+            .container{
+                padding: 10px 10%;
+            }
+
+            nav{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                
+            }
+
+            .logo a{
+                width: 140px;
+                font-size: 30px;
+                color:white;
+            }
+
+            nav ul li{
+                display: inline-block;
+                list-style: none;
+                margin: 10px 20px;
+            }
+
+            nav ul li a{
+                color: #fff;
+                text-decoration: none;
+                font-size: 18px;
+                position: relative;
+            }
+            nav ul li a::after{
+                content: '';
+                width: 100%;
+                height: 3px;
+                background: #ff004f;
+                position: absolute;
+                left: 0;
+                bottom: -6px;
+            }
+
+            .header-text{
+                margin-top: 20%;
+                font-size: 30px;
+            }
+
+            .header-text h1{
+                font-size: 60px;
+                margin-top: 5px;
+            }
+
+            .header-text h1 span{
+                color:red;
+            }
+
+            /* For the project Section */
+            #projectTitle{
+                display:flex;
+                justify-content: center;
+                padding-top: 200px;
+                flex-wrap: wrap;
+                color: white;
+                font-size: 30px;
+            }
+
+            #project{
+                padding: 80px 0;
+                color:#ababab;
+            }
+
+            .row{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+            .aboutcol1{
+                flex-basis: 35%;
+            }
+
+            .aboutcol1 img{
+                width: 100%;
+                height: 80%;
+                border-radius: 50px;
+            }
+
+            .aboutcol2{
+                flex-basis: 35%;
+            }
+            .aboutcol2 img{
+                width: 100%;
+                height: 80%;
+                border-radius: 50px;
+            }
+            
+            .aboutcol3{
+                flex-basis: 20%;
+            }
+
+            #subtitleProject{
+                font-size: 25px;
+                font-weight:  600;
+                color: white; 
+                text-align: left;
+            }
+
+            .descript{
+                margin-top: 10%;
+                font-size: 23px;
+                text-align: justify;
+            }
+
+            /* For 'My Skills' Section */
+            #skills{
+                padding: 100px 0;
+            }
+
+            .servicesList{
+                padding-top: 50px;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+            .skill1{
+                flex-basis: 15%;
+                
+            }
+            .skill1 img{
+                width: 230px;
+                height: 230px;
+            }
+            .skill1 p{
+                font-size: 20px;
+                padding: 5px 10px;
+                text-align: justify;
+            }
+            .skill1 h1{
+                font-size: 27px;
+                text-align: center;
+                padding-bottom: 10px;
+            }
+
+            .skill2{
+                flex-basis: 15%;
+            }
+            .skill2 img{
+                width: 230px;
+                height: 230px;
+            }
+            .skill2 p{
+                font-size: 20px;
+                padding: 5px 10px;
+                text-align: justify;
+            }
+            .skill2 h1{
+                font-size: 27px;
+                text-align: center;
+                padding-bottom: 10px;
+            }
+            
+            .skill3{
+                flex-basis: 15%;
+            }
+            .skill3 img{
+                width: 230px;
+                height: 230px;
+            }
+            .skill3 p{
+                font-size: 20px;
+                padding: 5px 10px;
+                text-align: justify;
+            }
+            .skill3 h1{
+                font-size: 27px;
+                text-align: center;
+                padding-bottom: 10px;
+            }
+
+            .skill4{
+                flex-basis: 15%;
+            }
+            .skill4 img{
+                width: 230px;
+                height: 230px;
+            }
+            .skill4 p{
+                font-size: 20px;
+                padding: 5px 10px;
+                text-align: justify;
+            }
+            .skill4 h1{
+                font-size: 27px;
+                text-align: center;
+                padding-bottom: 10px;
+            }
+
+            #subtitleSkills{
+                display:flex;
+                justify-content: left;
+                flex-wrap: wrap;
+                color: white;
+                font-size: 50px;
+                padding-bottom: 0px;
+            }
+
+
+            /* About Me Section */
+            #aboutMe{
+                padding: 200px 0;
+                color: #ababab;
+            }
+            
+            .AboutMeRow{
+                display:flex;
+                justify-content: space-between;
+                flex-direction: wrap;
+            }
+            .col1{
+                flex-basis: 35%;
+                flex-shrink: 0;
+            }
+
+            .col1 img{
+                width: 100%;
+                border-radius: 15px;
+            }
+
+            .col2{
+                flex-basis: 60%;
+            }
+            .col2 p{
+                font-size: 18px;
+            }
+
+            .subtitleAboutMe{
+                font-size: 60px;
+                font-weight: 600;
+                color: white;
+            }
+
+            .education{
+                padding-top: 30px;
+                font-size: 30px;
+                color: white;
+            }
+            .col2 ul{
+                padding: 10px 30px;
+            }
+
+            .col2 ul li{
+                padding:5px 0;
+            }
+           
+            .achievements{
+                padding-top: 30px;
+                font-size: 30px;
+                color: white;
+            }
+
+            /* Footer Sectiom */
+            .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 30px 0;
+            }
+
+            .footer .container {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .footerContent {
+                
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+            .footerSection {
+                padding: 0 50px;
+                flex-basis: 30%;
+            }
+
+            .footerSection h2 {
+                font-size: 20px;
+                margin-bottom: 10px;
+                padding-bottom: 10px;
+            }
+
+            .footerSection p {
+                font-size: 16px;
+                margin-bottom: 5px;
+                padding-bottom: 10px;
+            }
+
+            .backToTop {
+                color: #fff;
+                text-decoration: none;
+                font-size: 16px;
+            }
+
+            .backToTop:hover {
+                text-decoration: underline;
+            }
+
+        </style>
+
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <div class="logo"><a href="#">My Portfolio</a></div>
+                    <ul>
+                        <li><a href="#">About me</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Skills</a></li>
+                        <li><a href="#">Contact Information</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>BS Computer Science Student</p>
+                    <h1>Hi! I'm <span>Dan</span><br>Victor Gapaz</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- For the Project Section -->
+        <div id="projectTitle">
+            <h1>Project</h1>
+        </div>
+        <div id="project">
+            <div class="container">
+                <div class="row">
+                    <div class="aboutcol1">
+                        <img src="game.png">
+                    </div>
+                    <div class="aboutcol2">
+                        <img src="ingame.png">
+
+                    </div>
+                    <div class="aboutcol3">
+                        <h1 id="subtitleProject">About the Project:</h1>
+                        <p class="descript">This is a time-trial racing game. Its objective is to get as many stars as possible while avoiding the obstacles in the road. This project was developed using Java.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div id="skills">
+            <div class="container">
+                <h1 id="subtitleSkills">My Skills</h1>
+                <div class="servicesList">
+                    <div class="skill1">
+                        <h1>Mircosoft Office</h1>
+                        <img src="skill1.jpg">
+                        <p> Proficient in
+                            Microsoft Office and Google
+                            Workspace
+                        </p>
+                    </div>
+                    <div class="skill2">
+                        <h1>Video Editing</h1>
+                        <img src="skill2.jpg">
+                        <p>Has experience in
+                            video editing using Filmora 9 and 10
+                        </p>
+                    </div><div class="skill3">
+                        <h1>Programming</h1>
+                        <img src="skill3.jpg">
+                        <p>
+                            Knowledgeable using
+                            Python, C, Java, and R. Has
+                            experience using JavaScript, HTML,
+                            and CSS
+                            
+                        </p>
+                    </div><div class="skill4">
+                        <h1>Soft Skills</h1>
+                        <img src="skill4.jpg">
+                        <p>Responsive and good team
+                            player, highly motivated and self
+                            sufficient, and capable of executing
+                            commands with minimum supervision
+                            </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- About Me Section -->
+        <div id="aboutMe">
+            <div class="container">
+                <div class="AboutMeRow">
+                    <div class="col1">
+                        <img src="Aboutme.jpg">
+                    </div>
+                    <div class="col2">
+                        <h1 class="subtitleAboutMe">About Me</h1>
+                        <p>I am hardworking, optimistic, and proactive BS Computer Science student at
+                            the University of the Philippines Los Baños with academic achievements
+                            and leadership experience. I possess great social and problem-solving
+                            skills. I am willing to learn and I can easily adapt to changes. I am keen to pursue a
+                            career in computer science industry as a cyber security programmer.</p>
+                        
+                        <h1 class="education">Education</h1>
+                        <ul>
+                            <li>Laguna College (2018 - 2022)</li>
+                            <li>University of The Philippines (2022 - present)</li>
+                        </ul>
+
+                        <h1 class="achievements">Achievements and Extra-Curricular Activities</h1>
+                        <ul>
+                            <li>Treasurer of Social Studies Club at the Laguna College
+                                (2019-2020)</li>
+                            <li>Auditor of Grade 10 Officers at the Laguna College
+                                (2019- 2020)</li>
+                            <li>Student Performer (2016 - 2020)</li>
+                            <li>Student Performer (2016 - 2020)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer Section -->
+        <div class="footer">
+            <div class="container">
+                <div class="footerContent">
+                    <div class="footerSection">
+                        <h2>Contact Information</h2>
+                        <p>Address: San Pablo City, Laguna</p>
+                        <p>Contact Number: 09995024785</p>
+                        <p>Email: dogapaz@up.edu.ph</p>
+                    </div>
+                    <div class="footerSection">
+                        <h2>Copyright Information</h2>
+                        <p>&copy; 2024 Your Name. All rights reserved.</p>
+                    </div>
+                    <div class="footerSection">
+                        <a href="#" class="backToTop">Back to Top</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
